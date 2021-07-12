@@ -1,0 +1,92 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/utils/include.js"></script>
+
+    <meta name="viewport" content="width=device-width , initial-scale=1 ,shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/jquery-3.4.1.min.js"></script>
+    <script src="/js/libs/popper.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+
+    <script src="/js/edit_profile.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="js/menu.js" type="module"></script>
+
+    <title>Create/edit photo</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id=sidebar-wrapper></div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#" class="button-tog" id="menu-toggle">
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                </a>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h3 id="page-title">Modificar Perfil</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" id="errors"></div>
+                <div class="row">
+                    <div class="col-md">
+                        <form id="edit-profile-form">
+                            <div id="errors"></div>
+
+                            <div class="form-group">
+                                <label for="avatarUrl">URL de la imagen de perfil:</label>
+                                <input  type="text" class="form-control" id="avatarUrl" name="avatarUrl"
+                                    placeholder=" URL">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">Nombre:</label>
+                                <input required type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder=" Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apellidos:</label>
+                                <input required type="text" class="form-control" id="lastName" name="lastName"
+                                    placeholder=" Apellidos">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input required type="email" class="form-control" id="email" name="email"
+                                    placeholder=" ejemplo@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-description">Descripción:</label>
+                                <textarea class="form-control" id="input-description" name="description"
+                                    placeholder="Describe tu cuenta..." rows="4"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">
+                                    <button type="submit" class="btn btn-primary">Modificar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        include("menu.html", "#sidebar-wrapper");
+    </script>
+</body>
+
+</html>

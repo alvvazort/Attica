@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"
+            name= "viewport"
+            content= "width=device-width, initial-scale=1, shrink-to-fit=no"
+            />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Attica</title>
+        <link rel="icon" href="images/favicon.ico"> 
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        
+        <script src="/docs/js/utils/include.js"> </script>
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/menu.js" type="module"></script>
+        <script src="js/libs/axios.min.js "> </script>
+        <script src="js/categories.js" type="module"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css"
+            rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    </head>
+    <body id=categories>
+    <div id="wrapper" class= "menuDisplayed">
+       <!-- Sidebar -->
+       <div id=sidebar-wrapper></div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="profile">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                <a href="#" class="button-tog" id="menu-toggle">
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                </a>
+                <!--Content-->
+                <div id="errors"> </div>
+                <div id="Espacio"></div>
+                <div class="box">
+                    <div class="container-1">
+                        <form id="form-search">
+                            <span class="icon"><i class="fa fa-search"></i></span>
+                            <input type="search" id="search" name="search" placeholder="Search..." />
+                        </form>
+                        
+                    </div>
+                  </div>
+                </div>
+                <div id="box-create-category"><!-- Cuando se cliquea el botón se vuelve submit y se despliega un input-->
+                    <button  id="Create-category" class="brown-button">
+                        Crear Categoría
+                    </button>
+                    <form id='form-category'>
+                        <input  id="input-category" type="text" name= "category" placeholder=" Nombre de la categoría" class="text"></input>
+                        <button type="submit" id="crear" class="brown-button">Crear</button>
+                    </form>      
+
+                </div>
+                <div id="categories-text">
+                    Haz click en una de las categorías que más te guste, <br/>
+                    utiliza el buscador o crea una tu mismo ;)
+                </div>
+                <div id="container">
+                    <div id="Espacio"></div>
+
+                </div>
+            </div>
+            </div>
+            
+        </div>
+
+        
+        
+    </div>
+    <script>
+        include("menu.html", "#sidebar-wrapper");
+    </script>
+    </body>
+</html>

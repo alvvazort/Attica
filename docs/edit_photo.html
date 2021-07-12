@@ -1,0 +1,92 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/utils/include.js"></script>
+
+    <meta name="viewport" content="width=device-width , initial-scale=1 ,shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/jquery-3.4.1.min.js"></script>
+    <script src="/js/libs/popper.min.js"></script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+
+    <script src="/js/edit_photo.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="js/menu.js" type="module"></script>
+
+    <title>Create/edit photo</title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id=sidebar-wrapper></div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#" class="button-tog" id="menu-toggle">
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                </a>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h3 id="page-title">Sube una nueva foto</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" id="errors"></div>
+                <div class="row">
+                    <div class="col-md">
+                        <form id="form-photo-upload">
+                            <div class="form-group">
+                                <label for="input-url">URL:</label>
+                                <input required type="text" class="form-control" id="input-url" name="url"
+                                    placeholder="Photo URL">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-title">Titulo:</label>
+                                <input required type="text" class="form-control" id="input-title" name="title"
+                                    placeholder="Title">
+                            </div>
+                            <div class="form-group">
+                                <label for="input-description">Descripción:</label>
+                                <textarea class="form-control" id="input-description" name="description"
+                                    placeholder="Describe your image..." rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-category">Categoría:</label>
+                                <input type="text" class="form-control" id="input-category" name="categoryId"
+                                    placeholder="Nombre de la Categoría"></input>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-visibility">Privacidad:</label>
+                                <select required class="form-control" id="input-visibility" name="visibility">
+                                    <option value="Public">Público</option>
+                                    <option value="Private">Privado</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-md text-center">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        include("menu.html", "#sidebar-wrapper");
+    </script>
+</body>
+
+</html>
